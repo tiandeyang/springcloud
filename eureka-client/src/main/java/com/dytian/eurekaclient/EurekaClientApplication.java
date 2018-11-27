@@ -1,7 +1,11 @@
 package com.dytian.eurekaclient;
 
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import com.dytian.eurekaclient.entity.Wx_user;
 import com.dytian.eurekaclient.service.IWx_userService;
 import org.mybatis.spring.annotation.MapperScan;
+import org.nutz.json.Json;
+import org.nutz.json.JsonFormat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -27,12 +31,18 @@ public class EurekaClientApplication {
     String port;
 
 
+    @Autowired
+    IWx_userService iWx_userService;
 
 
     @RequestMapping("/hi")
     public String home(@RequestParam(value = "name",defaultValue = "dytian") String name){
 
-        return "hi "  + name +", i am from port:" + port;
+        EntityWrapper<Wx_user> where = new EntityWrapper<>();
+        where.eq("user_open_id",name);
+        Wx_user wx_user = iWx_userService.selectOne(where);
+
+        return "hi "  + Json.toJson(wx_user,JsonFormat.compact()) +", i am from port:" + port;
     }
 
 }

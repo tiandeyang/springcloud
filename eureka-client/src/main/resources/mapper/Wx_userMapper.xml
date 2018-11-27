@@ -3,7 +3,7 @@
 <mapper namespace="com.dubbo.dytian.provider.mapper.Wx_userMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.dubbo.dytian.provider.entity.Wx_user">
+    <resultMap id="BaseResultMap" type="Wx_user">
         <id column="user_id" property="user_id" />
         <result column="store_id" property="store_id" />
         <result column="store_name" property="store_name" />
