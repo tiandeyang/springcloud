@@ -1,6 +1,7 @@
 package com.dytian.servicefeign.controller;
 
 
+import com.ctrip.framework.apollo.core.dto.ApolloConfig;
 import com.dytian.servicefeign.service.SchedualServiceHi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +19,5 @@ public class HiController {
     public String sayHi(@RequestParam String name){
         return schedualServiceHi.sayHiFromClientOne(name);
     }
-
-
 
 }
