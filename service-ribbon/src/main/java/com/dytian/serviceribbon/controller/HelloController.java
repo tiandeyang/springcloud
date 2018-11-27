@@ -13,9 +13,11 @@ public class HelloController {
     @Autowired
     HelloService helloService;
 
+
     @GetMapping(value = "/hi")
-    public String hi(@RequestParam String name){
+    public String hi(@RequestParam(value = "name") String name){
         return helloService.hiService(name);
     }
+
 
 }
