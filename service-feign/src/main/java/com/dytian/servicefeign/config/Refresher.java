@@ -16,16 +16,19 @@ import java.util.Set;
 @Service
 public class Refresher implements ApplicationContextAware {
 
-
     private ApplicationContext context;
 
     @ApolloConfig
     private Config config;
 
+    String defaultValue = "default";
+
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         this.context = applicationContext;
     }
+
+    //
 
     @PostConstruct
     private void initialize() {
@@ -35,12 +38,17 @@ public class Refresher implements ApplicationContextAware {
     private void refresher(Set<String> changedKeys) {
         for (String changedKey : changedKeys) {
             System.out.println("this key is changed:"+changedKey);
+            String property = config.getProperty(changedKey, defaultValue);
+            System.out.println("updatedValue===="+property);
         }
+
         this.context.publishEvent(new EnvironmentChangeEvent(changedKeys));
     }
 
     @ApolloConfigChangeListener
     private void onChange(ConfigChangeEvent changeEvent) {
+        Set<String> strings = changeEvent.changedKeys();
+
         refresher(changeEvent.changedKeys());
     }
 
