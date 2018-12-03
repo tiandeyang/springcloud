@@ -7,8 +7,18 @@
     <groupId>com.dytian</groupId>
     <artifactId>springcloud</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>eureka-client</module>
+        <module>eureka-server</module>
+        <module>service-feign</module>
+        <module>service-ribbon</module>
+        <module>service-zuul</module>
+        <module>yuemee-order</module>
+        <module>yuemee-product</module>
+        <module>yuemee-user</module>
+    </modules>
+    
     <packaging>pom</packaging>
-
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -16,7 +26,6 @@
         <version>2.0.3.RELEASE</version>
         <relativePath/>
     </parent>
-
 
 
     <properties>
