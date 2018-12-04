@@ -14,10 +14,9 @@
         <module>service-ribbon</module>
         <module>service-zuul</module>
         <module>yuemee-order</module>
-        <module>yuemee-product</module>
         <module>yuemee-user</module>
     </modules>
-    
+
     <packaging>pom</packaging>
 
     <parent>
