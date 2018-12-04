@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dytian.mapper.User_financeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="User_finance">
+        <id column="user_id" property="user_id" />
+        <result column="money" property="money" />
+        <result column="coin" property="coin" />
+        <result column="profit_self" property="profit_self" />
+        <result column="profit_share" property="profit_share" />
+        <result column="profit_team" property="profit_team" />
+        <result column="recruit_dir" property="recruit_dir" />
+        <result column="recruit_alt" property="recruit_alt" />
+        <result column="cheif_active_profit" property="cheif_active_profit" />
+        <result column="director_active_profit" property="director_active_profit" />
+        <result column="recommend_cheif_prize" property="recommend_cheif_prize" />
+        <result column="recommend_director_prize" property="recommend_director_prize" />
+        <result column="passwd" property="passwd" />
+        <result column="thew_status" property="thew_status" />
+        <result column="thew_launch" property="thew_launch" />
+        <result column="thew_target" property="thew_target" />
+        <result column="thew_money" property="thew_money" />
+        <result column="thew_start" property="thew_start" />
+        <result column="thew_expire" property="thew_expire" />
+        <result column="cheif_status" property="cheif_status" />
+        <result column="cheif_start" property="cheif_start" />
+        <result column="cheif_expire" property="cheif_expire" />
+        <result column="cheif_target_dir" property="cheif_target_dir" />
+        <result column="cheif_target_alt" property="cheif_target_alt" />
+        <result column="cheif_value_dir" property="cheif_value_dir" />
+        <result column="cheif_value_alt" property="cheif_value_alt" />
+        <result column="director_status" property="director_status" />
+        <result column="director_start" property="director_start" />
+        <result column="director_expire" property="director_expire" />
+        <result column="director_target_team" property="director_target_team" />
+        <result column="director_target_cheif" property="director_target_cheif" />
+        <result column="director_value_team" property="director_value_team" />
+        <result column="director_value_cheif" property="director_value_cheif" />
+        <result column="direct_recruit_status" property="direct_recruit_status" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        user_id, money, coin, profit_self, profit_share, profit_team, recruit_dir, recruit_alt, cheif_active_profit, director_active_profit, recommend_cheif_prize, recommend_director_prize, passwd, thew_status, thew_launch, thew_target, thew_money, thew_start, thew_expire, cheif_status, cheif_start, cheif_expire, cheif_target_dir, cheif_target_alt, cheif_value_dir, cheif_value_alt, director_status, director_start, director_expire, director_target_team, director_target_cheif, director_value_team, director_value_cheif, direct_recruit_status
+    </sql>
+
+</mapper>

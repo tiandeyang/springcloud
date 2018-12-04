@@ -1,4 +1,4 @@
-package com.dytian.yuemee.product;
+package com.dytian.yuemee.user;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -10,10 +10,10 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @MapperScan("com.dytian.yuemee.product.mapper")
 @ComponentScan("com.dytian.*")
-public class YuemeeProApplication {
+public class YuemeeUserApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(YuemeeProApplication.class, args);
+        SpringApplication.run(YuemeeUserApplication.class, args);
     }
 
 }

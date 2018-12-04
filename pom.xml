@@ -15,6 +15,7 @@
         <module>service-zuul</module>
         <module>yuemee-order</module>
         <module>yuemee-user</module>
+        <module>yuemee-pro</module>
     </modules>
 
     <packaging>pom</packaging>

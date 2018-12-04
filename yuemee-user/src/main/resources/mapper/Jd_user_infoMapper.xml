@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dytian.mapper.Jd_user_infoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="Jd_user_info">
+        <id column="id" property="id" />
+        <result column="user_id" property="user_id" />
+        <result column="user_name" property="user_name" />
+        <result column="user_phone" property="user_phone" />
+        <result column="wechat_no" property="wechat_no" />
+        <result column="id_number" property="id_number" />
+        <result column="id_front_image" property="id_front_image" />
+        <result column="id_back_image" property="id_back_image" />
+        <result column="id_inhand_image" property="id_inhand_image" />
+        <result column="bank_card_number" property="bank_card_number" />
+        <result column="bank_card_front_image" property="bank_card_front_image" />
+        <result column="bank_card_back_image" property="bank_card_back_image" />
+        <result column="open_bank_name" property="open_bank_name" />
+        <result column="verify_status" property="verify_status" />
+        <result column="remark" property="remark" />
+        <result column="create_time" property="create_time" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, user_id, user_name, user_phone, wechat_no, id_number, id_front_image, id_back_image, id_inhand_image, bank_card_number, bank_card_front_image, bank_card_back_image, open_bank_name, verify_status, remark, create_time
+    </sql>
+
+</mapper>

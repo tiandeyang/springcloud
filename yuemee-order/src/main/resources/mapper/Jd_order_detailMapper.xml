@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dytian.mapper.Jd_order_detailMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="Jd_order_detail">
+        <id column="id" property="id" />
+        <result column="user_id" property="user_id" />
+        <result column="order_no" property="order_no" />
+        <result column="sub_order_no" property="sub_order_no" />
+        <result column="skuid" property="skuid" />
+        <result column="skuName" property="skuName" />
+        <result column="imagePath" property="imagePath" />
+        <result column="pcUrl" property="pcUrl" />
+        <result column="num" property="num" />
+        <result column="supply_price" property="supply_price" />
+        <result column="price" property="price" />
+        <result column="subtotal" property="subtotal" />
+        <result column="commission" property="commission" />
+        <result column="create_time" property="create_time" />
+        <result column="pay_status" property="pay_status" />
+        <result column="refund_reason" property="refund_reason" />
+        <result column="refund_amt" property="refund_amt" />
+        <result column="refund_num" property="refund_num" />
+        <result column="refund_remark" property="refund_remark" />
+        <result column="should_liquidation_money" property="should_liquidation_money" />
+        <result column="refund_voucher" property="refund_voucher" />
+        <result column="refund_addr_id" property="refund_addr_id" />
+        <result column="refund_name" property="refund_name" />
+        <result column="refund_mobile" property="refund_mobile" />
+        <result column="refund_addr_detail" property="refund_addr_detail" />
+        <result column="trans_com" property="trans_com" />
+        <result column="trans_id" property="trans_id" />
+        <result column="refund_status" property="refund_status" />
+        <result column="apply_time" property="apply_time" />
+        <result column="kefu_remark" property="kefu_remark" />
+        <result column="kefu_time" property="kefu_time" />
+        <result column="supplier_time" property="supplier_time" />
+        <result column="check_time" property="check_time" />
+        <result column="order_Package_id" property="order_Package_id" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, user_id, order_no, sub_order_no, skuid, skuName, imagePath, pcUrl, num, supply_price, price, subtotal, commission, create_time, pay_status, refund_reason, refund_amt, refund_num, refund_remark, should_liquidation_money, refund_voucher, refund_addr_id, refund_name, refund_mobile, refund_addr_detail, trans_com, trans_id, refund_status, apply_time, kefu_remark, kefu_time, supplier_time, check_time, order_Package_id
+    </sql>
+
+</mapper>
