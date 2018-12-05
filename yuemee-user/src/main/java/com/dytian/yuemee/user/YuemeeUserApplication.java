@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @EnableEurekaClient
 @SpringBootApplication
-@MapperScan("com.dytian.yuemee.product.mapper")
+@MapperScan("com.dytian.yuemee.user.mapper")
 @ComponentScan("com.dytian.*")
 public class YuemeeUserApplication {
 

@@ -1,7 +1,7 @@
 package com.dytian.yuemee.user.mapper;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
-import com.dytian.yuemee.user.entity.User_relation;
+import com.dytian.yuemee.common.entity.User_relation;
 
 /**
  * <p>

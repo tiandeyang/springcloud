@@ -1,7 +1,7 @@
 package com.dytian.yuemee.user.service;
 
 import com.baomidou.mybatisplus.service.IService;
-import com.dytian.yuemee.user.entity.User_finance;
+import com.dytian.yuemee.common.entity.User_finance;
 
 /**
  * <p>

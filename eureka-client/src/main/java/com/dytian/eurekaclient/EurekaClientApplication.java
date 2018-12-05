@@ -36,7 +36,7 @@ public class EurekaClientApplication {
     IWx_userService iWx_userService;
 
 
-    @GetMapping("/hi")
+    @GetMapping("/hi2")
     public String home(@RequestParam(value = "name",defaultValue = "dytian") String name){
         System.out.println("name===="+name);
         EntityWrapper<Wx_user> where = new EntityWrapper<>();

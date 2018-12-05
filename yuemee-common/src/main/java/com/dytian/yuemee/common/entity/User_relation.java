@@ -1,10 +1,9 @@
-package com.dytian.yuemee.user.entity;
+package com.dytian.yuemee.common.entity;
 
-import java.io.Serializable;
-
-import java.util.Date;
 import com.baomidou.mybatisplus.activerecord.Model;
+
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * <p>

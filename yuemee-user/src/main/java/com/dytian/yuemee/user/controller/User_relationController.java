@@ -17,5 +17,9 @@ import org.springframework.stereotype.Controller;
 @RequestMapping("/dytian/user_relation")
 public class User_relationController {
 
+
+
+
+
 }
 

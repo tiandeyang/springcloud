@@ -1,7 +1,7 @@
 package com.dytian.yuemee.user.service;
 
 import com.baomidou.mybatisplus.service.IService;
-import com.dytian.yuemee.user.entity.Jd_user;
+import com.dytian.yuemee.common.entity.Jd_user;
 
 /**
  * <p>
@@ -12,5 +12,9 @@ import com.dytian.yuemee.user.entity.Jd_user;
  * @since 2018-12-04
  */
 public interface IJd_userService extends IService<Jd_user> {
+
+
+
+
 
 }

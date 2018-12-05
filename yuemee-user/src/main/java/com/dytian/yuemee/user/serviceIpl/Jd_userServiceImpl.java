@@ -1,6 +1,6 @@
 package com.dytian.yuemee.user.serviceIpl;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
-import com.dytian.yuemee.user.entity.Jd_user;
+import com.dytian.yuemee.common.entity.Jd_user;
 import com.dytian.yuemee.user.mapper.Jd_userMapper;
 import com.dytian.yuemee.user.service.IJd_userService;
 import org.springframework.stereotype.Service;

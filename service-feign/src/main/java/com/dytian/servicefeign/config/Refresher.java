@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.PostConstruct;
 import java.util.Set;
 
-@Service
+//@Service
 public class Refresher implements ApplicationContextAware {
 
     private ApplicationContext context;
