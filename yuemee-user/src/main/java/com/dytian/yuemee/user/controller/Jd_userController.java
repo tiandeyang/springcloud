@@ -16,13 +16,11 @@ import org.nutz.json.Json;
 import org.nutz.lang.Times;
 import org.nutz.mvc.annotation.Param;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -36,10 +34,12 @@ import java.util.ArrayList;
  * @author dytian
  * @since 2018-12-04
  */
-@Controller
-@RequestMapping("/dytian/jd_user")
+@RestController
 public class Jd_userController {
 
+
+    @Value("${server.port}")
+    String port;
 
     @Autowired
     IJd_userService iJd_userService;
@@ -54,14 +54,11 @@ public class Jd_userController {
     IUser_relationService iUser_relationService;
 
 
-    @RequestMapping(value = "/addUser",method = RequestMethod.GET)
-    public String addUser(@RequestParam("user") String userStr) {
+    @RequestMapping(value = "/addUser",method = RequestMethod.POST)
+    public String addUser(@RequestBody Jd_user user) {
 
-        if (1==1){
-            return "hello girl !!!!";
-        }
 
-        Jd_user user = Json.fromJson(Jd_user.class, userStr);
+      //  Jd_user user = Json.fromJson(Jd_user.class, userStr);
         System.out.println("user==addUser="+Json.toJson(user));
         String app_wx_id = user.getApp_wx_id();
 

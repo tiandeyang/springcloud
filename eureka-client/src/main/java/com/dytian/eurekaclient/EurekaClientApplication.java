@@ -6,15 +6,17 @@ import com.dytian.eurekaclient.service.IWx_userService;
 import org.mybatis.spring.annotation.MapperScan;
 import org.nutz.json.Json;
 import org.nutz.json.JsonFormat;
+import org.nutz.lang.Times;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
 
 @RestController
 @EnableEurekaClient
@@ -45,5 +47,26 @@ public class EurekaClientApplication {
         System.out.println("wx_user == "+wx_user);
         return "hi "  + Json.toJson(wx_user,JsonFormat.compact()) +", i am from port:" + port;
     }
+
+    @RequestMapping(value = "/addUser",method = RequestMethod.GET)
+    public String addUser(@RequestParam(value = "user") String userStr) {
+        System.out.println("userStr====="+userStr);
+        if (1==1){
+            return "hello girl !!!!"+userStr;
+        }
+        return "hello";
+    }
+
+
+    @RequestMapping(value = "/addUser2",method = RequestMethod.POST)
+    public String addUser2(@RequestParam(value = "user2") String userStr) {
+        System.out.println("userStr=222===="+userStr);
+        if (1==1){
+            return "hello girl 22!!!!"+userStr;
+        }
+        return "hello";
+    }
+
+
 
 }
