@@ -1,7 +1,7 @@
 package com.dytian.yuemee.product.serviceIpl;
 
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
-import com.dytian.yuemee.product.entity.Jd_pro_spu;
+import com.dytian.yuemee.common.entity.Jd_pro_spu;
 import com.dytian.yuemee.product.mapper.Jd_pro_spuMapper;
 import com.dytian.yuemee.product.service.IJd_pro_spuService;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,7 @@
 package com.dytian.yuemee.product.service;
 
 import com.baomidou.mybatisplus.service.IService;
-import com.dytian.yuemee.product.entity.Jd_pro_spu;
+import com.dytian.yuemee.common.entity.Jd_pro_spu;
 
 /**
  * <p>

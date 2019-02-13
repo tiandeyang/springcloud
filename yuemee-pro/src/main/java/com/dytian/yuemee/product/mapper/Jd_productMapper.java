@@ -1,7 +1,7 @@
 package com.dytian.yuemee.product.mapper;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
-import com.dytian.yuemee.product.entity.Jd_product;
+import com.dytian.yuemee.common.entity.Jd_product;
 
 /**
  * <p>

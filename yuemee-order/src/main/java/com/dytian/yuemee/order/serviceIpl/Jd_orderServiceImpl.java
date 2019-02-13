@@ -2,7 +2,7 @@ package com.dytian.yuemee.order.serviceIpl;
 
 
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
-import com.dytian.yuemee.order.entity.Jd_order;
+import com.dytian.yuemee.common.entity.Jd_order;
 import com.dytian.yuemee.order.mapper.Jd_orderMapper;
 import com.dytian.yuemee.order.service.IJd_orderService;
 import org.springframework.stereotype.Service;

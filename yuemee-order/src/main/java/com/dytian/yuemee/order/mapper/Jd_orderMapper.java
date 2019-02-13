@@ -1,7 +1,7 @@
 package com.dytian.yuemee.order.mapper;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
-import com.dytian.yuemee.order.entity.Jd_order;
+import com.dytian.yuemee.common.entity.Jd_order;
 
 /**
  * <p>
