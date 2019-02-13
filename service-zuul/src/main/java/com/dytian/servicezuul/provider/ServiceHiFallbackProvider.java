@@ -13,10 +13,10 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
+
 @Component
 public class ServiceHiFallbackProvider implements FallbackProvider {
     private final Logger logger = LoggerFactory.getLogger(FallbackProvider.class);
-    
     //指定要处理的 service。
     @Override
     public String getRoute() {
@@ -53,6 +53,7 @@ public class ServiceHiFallbackProvider implements FallbackProvider {
             public void close() {
             }
 
+
             @Override
             public InputStream getBody() throws IOException {
                 return new ByteArrayInputStream("The service is unavailable.".getBytes());
@@ -64,6 +65,7 @@ public class ServiceHiFallbackProvider implements FallbackProvider {
                 headers.setContentType(MediaType.APPLICATION_JSON);
                 return headers;
             }
+
         };
     }
 }
