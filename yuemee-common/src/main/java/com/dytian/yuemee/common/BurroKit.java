@@ -16,9 +16,6 @@ public final class BurroKit {
     }
 
 
-
-
-
     public static String filedsRegOf(String... fileds) {
         String temp = "^";
         for (String string : fileds) {

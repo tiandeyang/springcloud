@@ -1,6 +1,7 @@
 package com.dytian.servicefeign.service;
 
 
+import com.dytian.yuemee.common.Response;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,6 +22,9 @@ public interface SchedualServiceHi {
 
     @RequestMapping(value = "/addUser2",method = RequestMethod.POST)
     String addUser2(@RequestParam(value = "user2") String user2);
+
+    @RequestMapping(value = "/msgsend",method = RequestMethod.GET)
+    String sendMsg(@RequestParam("phone") String phone, @RequestParam("code") String code);
 
 
 }

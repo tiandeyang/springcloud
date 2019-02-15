@@ -35,13 +35,13 @@ public class Refresher implements ApplicationContextAware {
         refresher(config.getPropertyNames());
     }
 
+
     private void refresher(Set<String> changedKeys) {
         for (String changedKey : changedKeys) {
             System.out.println("this key is changed:"+changedKey);
             String property = config.getProperty(changedKey, defaultValue);
             System.out.println("updatedValue===="+property);
         }
-
         this.context.publishEvent(new EnvironmentChangeEvent(changedKeys));
     }
 

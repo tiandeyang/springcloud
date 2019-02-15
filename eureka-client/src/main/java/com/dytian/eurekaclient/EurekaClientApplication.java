@@ -3,10 +3,10 @@ package com.dytian.eurekaclient;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.dytian.eurekaclient.entity.Wx_user;
 import com.dytian.eurekaclient.service.IWx_userService;
+import com.dytian.yuemee.common.Response;
 import org.mybatis.spring.annotation.MapperScan;
 import org.nutz.json.Json;
 import org.nutz.json.JsonFormat;
-import org.nutz.lang.Times;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -15,8 +15,6 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.*;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
 
 @RestController
 @EnableEurekaClient
@@ -29,7 +27,6 @@ public class EurekaClientApplication {
     public static void main(String[] args) {
         SpringApplication.run(EurekaClientApplication.class, args);
     }
-
 
     @Value("${server.port}")
     String port;
@@ -65,6 +62,14 @@ public class EurekaClientApplication {
             return "hello girl 22!!!!"+userStr;
         }
         return "hello";
+    }
+
+
+    @RequestMapping(value = "/msgsend",method = RequestMethod.GET)
+    public String sendMsg(@RequestParam("phone") String phone, @RequestParam("code") String code){
+        System.out.println(String.format("phone:%s,code:%s",phone,code));
+
+        return Response.ok().getMsg();
     }
 
 

@@ -10,6 +10,7 @@ import com.aliyuncs.http.MethodType;
 import com.aliyuncs.profile.DefaultProfile;
 import com.aliyuncs.profile.IClientProfile;
 import com.dytian.yuemee.shorttext.service.MsgService;
+import org.nutz.json.Json;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -57,6 +58,7 @@ public class MsgServiceImpl implements MsgService {
 		//  request.setOutId("yourOutId");
 		//请求失败这里会抛ClientException异常
 		SendSmsResponse sendSmsResponse = acsClient.getAcsResponse(request);
+		System.out.println(Json.toJson(sendSmsResponse));
 		if(sendSmsResponse.getCode() != null && sendSmsResponse.getCode().equals("OK")) {
 			return "OK";
 		}
@@ -66,8 +68,6 @@ public class MsgServiceImpl implements MsgService {
 	 * 上传发票短信提醒
 	 */
 	public String sendInvoiceMsg(String phone, String content) throws Exception{
-
-
 		//设置超时时间-可自行调整
 		System.setProperty("sun.net.client.defaultConnectTimeout", "10000");
 		System.setProperty("sun.net.client.defaultReadTimeout", "10000");

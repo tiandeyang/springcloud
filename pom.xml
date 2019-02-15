@@ -18,6 +18,7 @@
         <module>yuemee-pro</module>
         <module>yuemee-common</module>
         <module>provider-shorttext</module>
+        <module>yuemee-zipkin</module>
     </modules>
 
     <packaging>pom</packaging>
