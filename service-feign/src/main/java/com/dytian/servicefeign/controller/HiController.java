@@ -3,14 +3,19 @@ package com.dytian.servicefeign.controller;
 
 import com.dytian.servicefeign.service.SchedualServiceHi;
 import com.dytian.servicefeign.service.ServiceShortText;
+import com.dytian.servicefeign.service.UploadService;
 import com.dytian.servicefeign.service.UserService;
 import com.dytian.yuemee.common.Response;
 import com.dytian.yuemee.common.entity.Jd_user;
 import com.netflix.hystrix.HystrixCommandProperties;
 import org.nutz.json.Json;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Map;
 
 
@@ -25,6 +30,9 @@ public class HiController {
 
     @Autowired
     ServiceShortText serviceShortText;
+
+    @Autowired
+    UploadService uploadService;
 
 
     @RequestMapping(value = "/hi",method = RequestMethod.GET)
@@ -72,6 +80,27 @@ public class HiController {
         String a = schedualServiceHi.sendMsg(phone, code);
         return a;
     }
+
+
+
+    @RequestMapping(value = "/uploadFile",method = RequestMethod.POST, consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public String handleFileUpload(@RequestPart(value = "file") MultipartFile file) {
+        return uploadService.handleFileUpload(file);
+    }
+
+    @RequestMapping(value = "/uploadFile2",method = RequestMethod.POST, consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public String handleFileUpload2(@RequestPart(value = "file") MultipartFile[] file) throws IOException {
+
+        for (MultipartFile f:file){
+            System.out.println("fileName==========="+f.getOriginalFilename());
+            f.transferTo(new File("D:\\upload\\"+f.getOriginalFilename()));
+        }
+
+        // return uploadService.handleFileUpload(file);
+         return "ok";
+    }
+
+
 
 
 

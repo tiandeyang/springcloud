@@ -27,4 +27,7 @@ public interface SchedualServiceHi {
     String sendMsg(@RequestParam("phone") String phone, @RequestParam("code") String code);
 
 
+
+
+
 }

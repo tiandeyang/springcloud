@@ -18,6 +18,4 @@ public class YuemeeOrderApplication {
         SpringApplication.run(YuemeeOrderApplication.class, args);
     }
 
-
-
 }
